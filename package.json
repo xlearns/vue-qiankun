@@ -1,0 +1,22 @@
+{
+  "name": "superfusion",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:all": "cd packages/project-main && pnpm build",
+    "build:test": "cd packages/project-test && pnpm build",
+    "start:test": "cd packages/project-test && pnpm start",
+    "start:main": "cd packages/project-main && pnpm start ",
+    "start:all": "concurrently \"pnpm start:main\" \"pnpm start:test\"",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@chuangan/components": "workspace:^1.0.0",
+    "@chuangan/utils": "workspace:^1.0.0",
+    "concurrently": "^7.2.2"
+  }
+}

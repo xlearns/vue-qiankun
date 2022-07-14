@@ -1,3 +1,3 @@
-import actios from "./common/qiankun";
+import common from "./common";
 
-export { actios };
+export { common };

@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:all": "cd packages/project-main && pnpm build",
+    "dev":"pnpm start:all",
+    "build":"pnpm build:all",
+    "build:all": "pnpm build:main && pnpm build:test",
     "build:test": "cd packages/project-test && pnpm build",
+    "build:main": "cd packages/project-main && pnpm build ",
     "start:test": "cd packages/project-test && pnpm start",
     "start:main": "cd packages/project-main && pnpm start ",
     "start:all": "concurrently \"pnpm start:main\" \"pnpm start:test\"",
@@ -15,8 +18,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@chuangan/components": "workspace:^1.0.0",
-    "@chuangan/utils": "workspace:^1.0.0",
+    "@test/components": "workspace:^1.0.0",
+    "@test/utils": "workspace:^1.0.0",
     "concurrently": "^7.2.2"
   }
 }

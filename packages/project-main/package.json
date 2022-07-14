@@ -3,13 +3,16 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
+    "dev":"npm run start",
     "start": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "element-plus": "^2.2.9",
     "qiankun": "^2.7.3",
-    "vue": "^3.2.25"
+    "vue": "^3.2.25",
+    "vue-router": "^4.1.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.3",

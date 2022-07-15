@@ -2,10 +2,9 @@
   "name": "superfusion",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "dev":"pnpm start:all",
-    "build":"pnpm build:all",
+    "dev": "pnpm start:all",
+    "build": "pnpm build:all",
     "build:all": "pnpm build:main && pnpm build:test",
     "build:test": "cd packages/project-test && pnpm build",
     "build:main": "cd packages/project-main && pnpm build ",
@@ -19,6 +18,7 @@
   "license": "ISC",
   "dependencies": {
     "@test/components": "workspace:^1.0.0",
+    "@test/hooks": "workspace:^1.0.0",
     "@test/utils": "workspace:^1.0.0",
     "concurrently": "^7.2.2"
   }

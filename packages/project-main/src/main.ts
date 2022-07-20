@@ -39,6 +39,7 @@ registerMicroApps(apps, {
 	afterMount: [
 		(app: any) => {
 			console.log("[LifeCycle] after mount %c%s", "color: green;", app.name);
+			// Vue.prototype.$qiankun = props;
 		},
 	],
 	afterUnmount: [

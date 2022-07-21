@@ -13,7 +13,7 @@ const initialState = reactive<any>({
 const actions: type_masa = initGlobalState(initialState);
 
 actions.onGlobalStateChange((newState, prev) => {
-	console.log(newState, 111111);
+	// console.log(newState, 111111);
 	for (const key in newState) {
 		initialState[key] = newState[key];
 	}

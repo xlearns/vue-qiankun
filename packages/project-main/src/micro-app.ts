@@ -1,6 +1,4 @@
-import { ref } from "vue";
-import { getActiveRule } from "@test/utils/common";
-
+import store from "./store/qiankun/index";
 const microApps = [
 	{
 		name: "vue3Vite",
@@ -16,7 +14,7 @@ const apps = microApps.map((item) => {
 		container: item.container || "#cnbi-viewport", // 子应用挂载的div
 		props: {
 			routerBase: item.activeRule, // 下发基础路由
-			getGlobalState: "hello world", //下发全局状态
+			getGlobalState: store.getGlobalState, // 下发getGlobalState方法
 		},
 	};
 });
